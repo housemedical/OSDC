@@ -39,17 +39,3 @@ model = AutoModel.from_pretrained("moonshotai/Kimi-K2.5")
 
 - This improves automatic routing and layer-schema compatibility significantly.
 - Some model families may still need architecture-specific forward/cache behavior inside AirLLM core if their runtime semantics diverge from the chosen backend class.
-
-
-## Docker
-
-A ready-to-use container setup is included at repository root:
-- `Dockerfile`
-- `DOCKER_SETUP.md`
-
-Quick start:
-
-```bash
-docker build -t airllm-moe-support:latest .
-docker run --rm -it -e HF_TOKEN=${HF_TOKEN:-} airllm-moe-support:latest
-```
